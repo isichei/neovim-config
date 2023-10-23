@@ -13,6 +13,11 @@ return {
         filesystem = {
             filtered_items = {
                 visible = true,
+                always_show = {
+                    ".gitlab/",
+                    ".gitlab-ci/",
+                    ".gitlab-ci.yml"
+                },
             },
         },
     },
