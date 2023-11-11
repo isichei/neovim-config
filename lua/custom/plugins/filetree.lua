@@ -16,12 +16,16 @@ return {
                 always_show = {
                     ".gitlab/",
                     ".gitlab-ci/",
-                    ".gitlab-ci.yml"
+                    ".gitlab-ci.yml",
+                    ".gitignore"
+                },
+                never_show = {
+                    ".DS_Store",
+                },
+                never_show_by_pattern = { -- uses glob style patterns
+                    "**/*.DS_Store"
                 },
             },
         },
     },
-    config = function()
-        require('neo-tree').setup {}
-    end,
 }

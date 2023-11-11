@@ -139,7 +139,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'catppuccin',
         component_separators = '|',
         section_separators = '',
       },
@@ -211,6 +211,7 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   { import = 'custom.plugins' },
+  { "christoomey/vim-tmux-navigator" },
 }, {})
 
 -- [[ Setting options ]]
@@ -333,6 +334,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- [[ Configure Catppuccino]]
 require("catppuccin").setup({
   flavour = 'mocha',
+  term_colors = true,
   integrations = {
     cmp = true,
     gitsigns = true,
@@ -345,7 +347,7 @@ require("catppuccin").setup({
     },
   }
 })
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("catppuccin-mocha")
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
